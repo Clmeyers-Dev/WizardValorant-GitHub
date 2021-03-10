@@ -17,6 +17,8 @@ public class gun : MonoBehaviour
     private void Start()
     {
         effecttoSpawn = vfx[0];
+        controller = GetComponentInParent<SC_FPSController>();
+        FPSCam = GetComponentInParent<Camera>();
     }
     void Update()
     {

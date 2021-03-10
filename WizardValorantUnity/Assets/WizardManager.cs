@@ -9,6 +9,8 @@ public class WizardManager : MonoBehaviour
     public CheckTerrainTexture TerrainChecker;
     public UIManager uIManager;
     public GameObject CurrentCatalyst;
+    public GameObject Catalyst;
+    public Transform loadPostion;
     public bool weaponLoaded;
     public bool buyMenuUp;
     public int ArcanePower;
@@ -44,13 +46,19 @@ public class WizardManager : MonoBehaviour
             }
             
         }
-        if (CurrentCatalyst != null)
+        if (CurrentCatalyst != null&&weaponLoaded==false)
         {
             loadCatalyst();
+           
         }
+       
     }
    void loadCatalyst()
     {
-
+        Catalyst = Instantiate(CurrentCatalyst, loadPostion.transform.position, Quaternion.RotateTowards(loadPostion.transform.rotation,loadPostion.transform.rotation,0));
+       // Catalyst.transform.rotation = Quaternion.Euler(0, 0, 0);
+        Catalyst.transform.parent = loadPostion.transform;
+        weaponLoaded = true;
+        
     }
 }
