@@ -10,6 +10,7 @@ public class gun : MonoBehaviour
     private float nextTimeToFire = 0f;
     public Camera FPSCam;
     public SC_FPSController controller;
+    public WizardManager wizardManager;
     public GameObject firePoint;
     public List<GameObject> vfx = new List<GameObject>();
     private GameObject effecttoSpawn;
@@ -19,6 +20,7 @@ public class gun : MonoBehaviour
         effecttoSpawn = vfx[0];
         controller = GetComponentInParent<SC_FPSController>();
         FPSCam = GetComponentInParent<Camera>();
+        wizardManager = GetComponentInParent<WizardManager>();
     }
     void Update()
     {
@@ -49,7 +51,7 @@ public class gun : MonoBehaviour
         }
 
         RaycastHit hit;
-       if( Physics.Raycast(FPSCam.transform.position, FPSCam.transform.forward, out hit, range))
+       if( Physics.Raycast(wizardManager.Catalyst.transform.forward, FPSCam.transform.forward, out hit, range))
         {
 
             HealthManager target=  hit.transform.GetComponent<HealthManager>();
