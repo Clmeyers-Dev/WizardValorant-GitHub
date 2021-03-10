@@ -33,6 +33,7 @@ public class BuySlot : MonoBehaviour
             if (wizardManager.ArcanePower >= Price)
             {
                 wizardManager.ArcanePower -= Price;
+                itemBought = true;
                 if (isCatalyst)
                 {
                     wizardManager.CurrentCatalyst = item;
@@ -44,7 +45,7 @@ public class BuySlot : MonoBehaviour
                 Debug.Log("you dont have enough power to obtain that");
             }
             Debug.Log(wizardManager.ArcanePower);
-            itemBought = true;
+           
         }
     }
     void Update()

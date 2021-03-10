@@ -9,6 +9,7 @@ public class WizardManager : MonoBehaviour
     public CheckTerrainTexture TerrainChecker;
     public UIManager uIManager;
     public GameObject CurrentCatalyst;
+    public bool weaponLoaded;
     public bool buyMenuUp;
     public int ArcanePower;
     void Start()
@@ -19,6 +20,7 @@ public class WizardManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    
     void Update()
     {
         controller.Run();
@@ -42,5 +44,13 @@ public class WizardManager : MonoBehaviour
             }
             
         }
+        if (CurrentCatalyst != null)
+        {
+            loadCatalyst();
+        }
+    }
+   void loadCatalyst()
+    {
+
     }
 }

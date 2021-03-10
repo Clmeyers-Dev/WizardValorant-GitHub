@@ -13,17 +13,29 @@ public class gun : MonoBehaviour
     public GameObject firePoint;
     public List<GameObject> vfx = new List<GameObject>();
     private GameObject effecttoSpawn;
+    public bool automatic;
     private void Start()
     {
         effecttoSpawn = vfx[0];
     }
     void Update()
     {
-        if (Input.GetButton("Fire1")&&Time.time>= nextTimeToFire)
+        if (automatic == true)
         {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
-        }    
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+            {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                Shoot();
+            }
+        }
+        else
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                
+                Shoot();
+            }
+        }
     }
     void Shoot()
     {
