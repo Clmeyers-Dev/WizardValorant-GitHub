@@ -919,6 +919,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   firePoint: {fileID: 0}
   vfx: []
+  Automatic: 0
 --- !u!1 &488357338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1438,7 @@ Transform:
   m_Children:
   - {fileID: 762591100}
   - {fileID: 1066269765}
+  - {fileID: 1924176636}
   m_Father: {fileID: 312577737}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1510,6 +1512,7 @@ MonoBehaviour:
   firePoint: {fileID: 1083045967}
   vfx:
   - {fileID: 1226858983136502997, guid: f513d3ba76ceceb4ca1215754a43f8b5, type: 3}
+  Automatic: 0
 --- !u!4 &762591100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5846485353116117428, guid: 849bb40411f3f2c4cb5bfa370937480c, type: 3}
@@ -1548,8 +1551,9 @@ MonoBehaviour:
   TerrainChecker: {fileID: 0}
   uIManager: {fileID: 0}
   CurrentCatalyst: {fileID: 0}
+  loadedItem: {fileID: 0}
   buyMenuUp: 0
-  ArcanePower: 0
+  ArcanePower: 1500
 --- !u!4 &810783269
 Transform:
   m_ObjectHideFlags: 0
@@ -1600,6 +1604,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   firePoint: {fileID: 0}
   vfx: []
+  Automatic: 0
 --- !u!1 &1083045967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 590023403, guid: 849bb40411f3f2c4cb5bfa370937480c, type: 3}
@@ -1744,6 +1749,7 @@ MonoBehaviour:
   TerrainChecker: {fileID: 0}
   uIManager: {fileID: 0}
   CurrentCatalyst: {fileID: 0}
+  loadedItem: {fileID: 0}
   buyMenuUp: 0
   ArcanePower: 0
 --- !u!4 &1267977048
@@ -2121,6 +2127,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 1dc2a27ad3a63d24bad7f1c6d159013e, type: 3}
   m_PrefabInstance: {fileID: 582568855}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1924176635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924176636}
+  m_Layer: 0
+  m_Name: WandLoadLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1924176636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924176635}
+  m_LocalRotation: {x: -0, y: -0.05495013, z: -0, w: 0.99848914}
+  m_LocalPosition: {x: 1.8403778, y: -2.14, z: 5.86512}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 705746334}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971044892
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,6 +2540,10 @@ PrefabInstance:
       propertyPath: WeaponName
       value: Wand
       objectReference: {fileID: 0}
+    - target: {fileID: 74514804138520755, guid: c26b188fd53ca8849b65855b32f7661d, type: 3}
+      propertyPath: isCatalyst
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 74514804138520756, guid: c26b188fd53ca8849b65855b32f7661d, type: 3}
       propertyPath: m_Name
       value: Spell Slot
@@ -2778,5 +2818,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 762555230, guid: 849bb40411f3f2c4cb5bfa370937480c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 849bb40411f3f2c4cb5bfa370937480c, type: 3}
