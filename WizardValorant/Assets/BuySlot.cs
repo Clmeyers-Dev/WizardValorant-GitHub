@@ -36,6 +36,7 @@ public class BuySlot : MonoBehaviour
                 if (isCatalyst)
                 {
                     wizardManager.CurrentCatalyst = item;
+                    
                 }
 
             }

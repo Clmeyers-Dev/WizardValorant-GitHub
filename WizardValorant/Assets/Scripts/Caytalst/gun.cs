@@ -14,9 +14,13 @@ public class gun : MonoBehaviour
     public List<GameObject> vfx = new List<GameObject>();
     private GameObject effecttoSpawn;
     public bool Automatic;
+    public LayerMask myLayerMask;
+    public WizardManager wizardManager;
     private void Start()
     {
+        wizardManager = GetComponentInParent<WizardManager>();
         effecttoSpawn = vfx[0];
+        FPSCam = GetComponentInParent<Camera>();
     }
     void Update()
     {
@@ -32,6 +36,7 @@ public class gun : MonoBehaviour
     }
     void Shoot()
     {
+        
         GameObject vfx;
         if (firePoint != null)
         {
@@ -40,9 +45,9 @@ public class gun : MonoBehaviour
         }
 
         RaycastHit hit;
-       if( Physics.Raycast(FPSCam.transform.position, FPSCam.transform.forward, out hit, range))
+       if( Physics.Raycast(wizardManager.loadPostion.transform.position, FPSCam.transform.forward, out hit, range,myLayerMask))
         {
-
+            Debug.Log("hit "+ hit.transform.name);
             HealthManager target=  hit.transform.GetComponent<HealthManager>();
 
             if (target != null)
