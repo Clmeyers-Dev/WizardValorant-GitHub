@@ -12,7 +12,8 @@ public class UIManager : MonoBehaviour
     public GameObject InteractBar;
     public TextMeshProUGUI ArcanePower;
     public GameObject buyMenuUI;
-   
+    public Bomb bomb;
+    public TextMeshProUGUI bombTimer;
     //This deterimes if the eqiupment panel is visible by default when the player opens their inventory
     public bool equipimentToggle = false;
     void Start()
@@ -35,6 +36,18 @@ public class UIManager : MonoBehaviour
          *This sets the max value of the health bar 
          * The second part sets the value of the health bar to the players current Health
          */
+         if(bomb == null)
+        {
+           bomb =  FindObjectOfType<Bomb>();
+        }
+        if (bomb != null)
+        {
+            bombTimer.text = ""+bomb.currentBombTime ;
+        }
+        else
+        {
+            bombTimer.text = "";
+        }
         healthBar.text =""+ statMan.currentHealth;
         
     }

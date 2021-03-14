@@ -19,6 +19,7 @@ public class WizardManager : MonoBehaviour
     public bool hasBook;
     public bool bookLoaded;
     public GameObject book;
+    public GameObject holdingBook;
     public bool bookToggle;
     public GameObject bookLocation;
     public int i;
@@ -169,7 +170,7 @@ public class WizardManager : MonoBehaviour
                 Destroy(loadedItem);
             }
             Debug.Log("loaded book");
-            loadedItem = Instantiate(book, loadPostion.transform.position, Quaternion.identity);
+            loadedItem = Instantiate(holdingBook, loadPostion.transform.position, Quaternion.identity);
             loadedItem.transform.rotation.eulerAngles.Set(0, 0, 0);
             loadedItem.transform.parent = loadPostion.transform.transform;
             loadedItem.transform.localRotation = Quaternion.identity;
