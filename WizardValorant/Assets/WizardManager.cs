@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WizardManager : MonoBehaviour
+public class WizardManager : HealthManager
 {
     // Start is called before the first frame update
     public SC_FPSController controller;
@@ -23,7 +23,7 @@ public class WizardManager : MonoBehaviour
     public bool bookToggle;
     public GameObject bookLocation;
     public int i;
-
+    public bool Attacking;
     public float bookTimerMax;
     public float currentBookTimer;
     void Start()

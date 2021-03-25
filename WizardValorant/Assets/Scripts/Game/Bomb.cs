@@ -9,6 +9,8 @@ public class Bomb : MonoBehaviour
     public float currentBombTime;
     public float timeToDiffuse;
    public float currentDiffuseTime;
+    public bool exploded;
+    public bool diffused;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class Bomb : MonoBehaviour
        
         if (currentBombTime <= 0)
         {
+            exploded = true;
             Debug.Log("Explode");
         }
     }

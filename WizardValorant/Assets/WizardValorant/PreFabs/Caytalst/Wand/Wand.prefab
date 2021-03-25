@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 5846485353116117428}
   - component: {fileID: 762555229}
   - component: {fileID: 762555230}
+  - component: {fileID: 8448374981595934589}
   m_Layer: 0
   m_Name: Wand
   m_TagString: Untagged
@@ -103,6 +104,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   wizardManager: {fileID: 0}
+--- !u!114 &8448374981595934589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5846485353116284308}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e143fbac72a61f47b8697e4015e27c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 875825476378274520, guid: 666c0bade4e9e99499d1288baa1e5c90, type: 3}
+  bulletSpawn: {fileID: 0}
+  bulletSpeed: 30
+  lifeTime: 3
+  numberOfBullets: 0
+  damage: 10
+  fireRate: 15
+  ConeSize: 0
+  xSpread: 0
+  ySpread: 0
 --- !u!1001 &9128462281134428637
 PrefabInstance:
   m_ObjectHideFlags: 0
