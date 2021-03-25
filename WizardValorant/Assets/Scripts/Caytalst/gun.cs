@@ -48,7 +48,7 @@ public class gun : MonoBehaviour
        if( Physics.Raycast(wizardManager.loadPostion.transform.position, FPSCam.transform.forward, out hit, range,myLayerMask))
         {
             Debug.Log("hit "+ hit.transform.name);
-            HealthManager target=  hit.transform.GetComponent<HealthManager>();
+            HealthManager target=  hit.transform.GetComponentInParent<HealthManager>();
 
             if (target != null)
             {

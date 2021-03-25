@@ -290,7 +290,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToPlant: 4
-  maxBombTime: 45
+  maxBombTime: 10
   currentBombTime: 0
   timeToDiffuse: 0
   currentDiffuseTime: 0
+  exploded: 0
+  diffused: 0
